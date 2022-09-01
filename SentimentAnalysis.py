@@ -34,7 +34,3 @@ pt_batch = [tokenizer([tweet], padding = True, truncation = True, return_tensors
 pt_outputs = [pt_model(**x) for x in pt_batch]
 pt_predictions = [nn.functional.softmax(y.logits, dim = -1) for y in pt_outputs]
 pt_predictions
-
-
-
-
